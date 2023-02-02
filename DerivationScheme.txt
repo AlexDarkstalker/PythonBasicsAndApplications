@@ -1,0 +1,24 @@
+class A:
+    pass
+
+class B(A):
+    pass
+
+class C:
+    pass
+
+class D(C):
+    pass
+
+class E(B, C, D):
+    pass
+
+
+              Object
+                ||
+    A  -------------------------  C
+   ||                          /  ||
+    B                         /   D
+     \                       /   /
+                    E
+Нельзя использовать C раньше D, так как C - родитель D. Ошибка
